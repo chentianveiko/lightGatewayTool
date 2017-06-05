@@ -6,12 +6,12 @@ import QtQuick.Controls.Styles 1.4
 Window {
     id:mainWindow;
     visible: true
-    width: 400;
-    minimumWidth: 400;
-    //maximumWidth: 400;
-    height: 300;
-    minimumHeight: 300;
-    //maximumHeight: 300;
+    width: 355;
+    minimumWidth: 355;
+    maximumWidth: 355;
+    height: 245;
+    minimumHeight: 245;
+    maximumHeight: 245;
     title: qsTr("YanTech Gateway Tool");
 
     Rectangle{
@@ -26,6 +26,7 @@ Window {
             width: 100;
             height: 100;
             color: "#66CC66";
+            text.text: qsTr("Gateway")+"\r\n" + qsTr("Config");
         }
 
         UsrMainButton{
@@ -34,6 +35,27 @@ Window {
             width: 100;
             height: 100;
             color: "#993399";
+            text.text: qsTr("Gateway")+"\r\n" + qsTr("Test");
+        }
+
+        UsrMainButton{
+            id:btn_SoftInf;
+            anchors.left: btn_enterGwConfig.right;
+            anchors.top: btn_enterGwTest.bottom;
+            width: 100;
+            height: 100;
+            color: "#0099CC";
+            text.text: qsTr("About");
+        }
+
+        UsrMainButton{
+            id:btn_exitProgram;
+            anchors.left: btn_SoftInf.right;
+            anchors.top: btn_enterGwTest.bottom;
+            width: 100;
+            height: 100;
+            color: "#FF6600";
+            text.text: qsTr("EXIT");
         }
     }
 }

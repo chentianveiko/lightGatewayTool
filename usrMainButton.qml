@@ -10,7 +10,7 @@ Rectangle{
     anchors.leftMargin: 5;
     anchors.topMargin: 5;
 
-    property alias text: alias ;
+    property alias text: _text ;
 
     Text {
         id:_text;
@@ -33,9 +33,13 @@ Rectangle{
             text.font.pixelSize = 24;
         }
         onEntered: {
+            parent.width = parent.width + 10;
+            parent.height = parent.height + 10;
             text.font.bold = true;
         }
         onExited: {
+            parent.width = parent.width - 10;
+            parent.height = parent.height - 10;
             text.font.bold = false;
         }
 
