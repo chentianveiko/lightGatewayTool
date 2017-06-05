@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>battery.png</file>
+        <file>clos.png</file>
+        <file>down_arrows.png</file>
+        <file>FLASH.png</file>
+        <file>GPRS.png</file>
+        <file>log.ico</file>
+        <file>rf.png</file>
+        <file>RJ-45.png</file>
+        <file>RTC.png</file>
+        <file>sw_green.png</file>
+        <file>watch_dog.png</file>
+    </qresource>
+</RCC>
