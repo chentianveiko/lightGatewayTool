@@ -11,6 +11,7 @@ Rectangle{
     anchors.topMargin: 5;
 
     property alias text: _text ;
+    property alias mous: msArea;
 
     Text {
         id:_text;

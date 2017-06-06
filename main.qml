@@ -14,6 +14,13 @@ Window {
     maximumHeight: 245;
     title: qsTr("YanTech Gateway Tool");
 
+    focus:true;
+    // 附加属性
+    Keys.enabled: true;
+    Keys.onEscapePressed: {
+        Qt.quit();
+    }
+
     Rectangle{
         id:mainForm;
         width: parent.width;
