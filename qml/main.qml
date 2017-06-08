@@ -14,20 +14,20 @@ Window {
     maximumHeight: 245;
     title: qsTr("YanTech Gateway Tool");
 
-    focus:true;
-    // 附加属性
-    Keys.enabled: true;
-    Keys.onEscapePressed: {
-        Qt.quit();
-    }
-
     Rectangle{
         id:mainForm;
         width: parent.width;
         height: parent.height;
         color: "#336699";
 
-        UsrMainButton{
+        // 附加属性
+        //focus: true;
+        //Keys.enabled: true;
+        //Keys.onEscapePressed: {
+        //    Qt.quit();
+        //}
+
+        UsrButton{
             id:btn_enterGwConfig;
             anchors.left: parent.left;
             width: 100;
@@ -36,7 +36,7 @@ Window {
             text.text: qsTr("Gateway")+"\r\n" + qsTr("Config");
         }
 
-        UsrMainButton{
+        UsrButton{
             id:btn_enterGwTest;
             anchors.left: btn_enterGwConfig.right;
             width: 100;
@@ -45,7 +45,7 @@ Window {
             text.text: qsTr("Gateway")+"\r\n" + qsTr("Test");
         }
 
-        UsrMainButton{
+        UsrButton{
             id:btn_SoftInf;
             anchors.left: btn_enterGwConfig.right;
             anchors.top: btn_enterGwTest.bottom;
@@ -55,7 +55,7 @@ Window {
             text.text: qsTr("About");
         }
 
-        UsrMainButton{
+        UsrButton{
             id:btn_exitProgram;
             anchors.left: btn_SoftInf.right;
             anchors.top: btn_enterGwTest.bottom;
@@ -63,6 +63,13 @@ Window {
             height: 100;
             color: "#FF6600";
             text.text: qsTr("EXIT");
+        }
+
+        Connections{
+            target: btn_exitProgram;
+            onBtn_clicked:{
+                Qt.quit();
+            }
         }
     }
 }

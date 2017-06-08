@@ -1,7 +1,6 @@
 import QtQuick 2.0
 
 Rectangle{
-    id:rectFirst;
     width: 100;
     height: 100;
     color: "#66CC66";
@@ -12,6 +11,9 @@ Rectangle{
 
     property alias text: _text ;
     property alias mous: msArea;
+
+    // 鼠标点击后发送的信号
+    signal btn_clicked();
 
     Text {
         id:_text;
@@ -32,6 +34,7 @@ Rectangle{
         }
         onReleased: {
             text.font.pixelSize = 24;
+            btn_clicked();
         }
         onEntered: {
             parent.width = parent.width + 10;
